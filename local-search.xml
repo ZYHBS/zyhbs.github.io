@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title></title>
+    <link href="/2023/05/02/02Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0(15-42)/"/>
+    <url>/2023/05/02/02Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0(15-42)/</url>
+    
+    <content type="html"><![CDATA[<p>Java基础（JavaSE）是学习JavaEE、大数据、Android开发的基石。</p><p>人机交互方式：<br>图形化界面（GUI）<br>命令行方式（CLI）</p><p>Java基础知识图谱：<br><img src="/./images/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1.png" alt="知识图谱"></p><p>&#x3D;&#x3D;应用程序 &#x3D; 算法 + 数据结构&#x3D;&#x3D;</p><p>&#x3D;&#x3D;常用的DOS命令：&#x3D;&#x3D;<br><img src="/./images/%E5%B8%B8%E7%94%A8%E7%9A%84DOS%E5%91%BD%E4%BB%A4.png" alt="DOS命令"></p><br/><p>开发效率：Python &gt; Java &gt; C(C++)<br>运行效率：Java &gt; C(C++) &gt; Python</p><p>Java语言的特点：<br><img src="/./images/Java%E8%AF%AD%E8%A8%80%E7%9A%84%E7%89%B9%E7%82%B9.png" alt="特点"></p><br/><p>&#x3D;&#x3D;JDK与JRE与JVM的关系：&#x3D;&#x3D;<br>JDK &#x3D; JRE + Java的开发工具(Java.exe,javac.exe,javadoc.exe等)<br>JRE &#x3D; JVM + Java的核心内库<br><img src="/./images/JDK%E4%B8%8EJRE%E4%B8%8EJVM%E7%9A%84%E5%85%B3%E7%B3%BB.png" alt="关系"></p><br/><p>配置环境变量：<br>&#x3D;&#x3D;path&#x3D;&#x3D;：Windows操作系统执行命令时所要搜寻的路径。<br>(1)配置path目的：希望在&#x3D;&#x3D;任何路径下&#x3D;&#x3D;都可以执行Java的开发工具(Java.exe,javac.exe,javadoc.exe等)<br>(2)JAVA_HOME &#x3D; bin文件的上一级目录<br>(3)path &#x3D; %JAVA_HOME%\bin</p><p>&#x3D;&#x3D;main()方法&#x3D;&#x3D;解析：<br><img src="/./images/main()%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90.png" alt="main方法"><br>(1)class 关键字：用于在 Java 中声明一个类。<br>(2)public 关键字：一个表示&#x3D;&#x3D;可见性&#x3D;&#x3D;的访问修饰符。<br>(3)static 关键字：我们可以用它来&#x3D;&#x3D;声明任何一个方法&#x3D;&#x3D;，被 static 修饰后的方法称之为&#x3D;&#x3D;静态方法&#x3D;&#x3D;。静态方法不需要为其创建对象就能&#x3D;&#x3D;直接调用&#x3D;&#x3D;。<br>(4)void 关键字：表示该方法不返回任何值。<br>(5)main 关键字：表示该方法为&#x3D;&#x3D;主方法&#x3D;&#x3D;，也就是程序运行的入口。main() 方法由 Java 虚拟机执行，配合上 static 关键字后，可以不用创建对象就可以调用，可以节省不少内存空间。<br>(6)String [] args：main() 方法的参数，类型为 String 数组，参数名为 args。<br>(7)System.out.println()：一个 Java 语句，一般情况下是将传递的参数打印到控制台。<br>①System 是 java.lang 包中的一个 final 类，该类提供的设施包括标准输入，标准输出和错误输出流等等。<br>②out 是 System 类的静态成员字段，类型为 PrintStream，它与主机的标准输出控制台进行映射。<br>③println 是 PrintStream 类的一个方法，通过调用 print 方法并添加一个换行符实现的。</p><p>Java规范的三种注释方式：<br>单行注释<br>多行注释<br>&#x3D;&#x3D;文档注释（Java特有）— 格式为：&#x2F;*<em>………</em>&#x2F;&#x3D;&#x3D;<br>注释的作用：<br>（1）对所写的程序进行解释说明，增强可读性。方便自己，方便别人。<br>（2）调试所写代码。<br>特点：单行注释和多行注释，注释了的内容不参与编译。</p><p>文档注释的使用：<br><img src="/./images/%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F.png" alt="文档注释"><br>注：注释内容可以被JDK提供的工具&#x3D;&#x3D;Javadoc所解析&#x3D;&#x3D;，生成一套以&#x3D;&#x3D;网页文件html形式&#x3D;&#x3D;体现的该程序的&#x3D;&#x3D;说明文档&#x3D;&#x3D;。</p><p>输出语句：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs Java">System.out.print() <span class="hljs-comment">//只输出数据。</span><br>System.out.println() <span class="hljs-comment">//先输出数据，然后换行。</span><br></code></pre></td></tr></table></figure><p>Java程序编写–编译–运行的过程：<br>编写：我们将编写的Java代码保存在以 &#x3D;&#x3D;“.Java” 结尾的源文件&#x3D;&#x3D;中。<br>编译：使用&#x3D;&#x3D;Javac.exe命令编译&#x3D;&#x3D;我们的Java源文件。格式：Javac 源文件名.java<br>运行：使用&#x3D;&#x3D;Java.exe命令解释运行&#x3D;&#x3D;我们的字节码文件。格式：Java 类名</p><p>编译的过程：<br>编译以后，会生成一个或多个字节码文件。字节码文件的&#x3D;&#x3D;文件名&#x3D;&#x3D;与Java源文件中的&#x3D;&#x3D;类名相同&#x3D;&#x3D;。</p><p>注：<br>(1)在一个Java源文件中可以声明&#x3D;&#x3D;多个class&#x3D;&#x3D;。但是，只能最多有&#x3D;&#x3D;一个类声明为public&#x3D;&#x3D;的。<br>(2)声明为public的类的&#x3D;&#x3D;类名&#x3D;&#x3D;必须与&#x3D;&#x3D;源文件名相同&#x3D;&#x3D;。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2023/05/01/hello-world/"/>
     <url>/2023/05/01/hello-world/</url>
